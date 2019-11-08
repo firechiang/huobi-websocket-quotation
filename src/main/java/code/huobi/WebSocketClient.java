@@ -42,7 +42,9 @@ import java.util.List;
  * as this is the default.
  */
 public final class WebSocketClient {
-
+    // 火币WebSocket文档：https://huobiapi.github.io/docs/spot/v1/cn/#websocket
+    // Pro 全球站行情请求地址（需要翻墙）：wss://api.huobi.pro/ws
+    // HADAX 站行情请求地址（不需要翻墙）：wss://api.hadax.com/ws
     static final String URL = System.getProperty("url", "wss://api.huobi.br.com/ws");
 
     public static void main(String[] args) throws Exception {
