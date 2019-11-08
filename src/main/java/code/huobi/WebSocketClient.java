@@ -106,7 +106,7 @@ public final class WebSocketClient {
 
             Channel ch = b.connect(uri.getHost(), port).sync().channel();
             handler.handshakeFuture().sync();
-            //{"sub":"market.adausdt.kline.1min","id":"id1"}
+            //{"sub":"market.adausdt.kline.1min","id":"id1",\"freq-ms\":5000} //freq-ms推送间隔时间，可选参数，取值 1000,2000,5000
             List<String> msgs=new ArrayList<String>();
             msgs.add("{\"sub\":\"market.adausdt.kline.1min\",\"id\":\"id1\"}");
             msgs.add("{\"sub\":\"market.eosusdt.kline.1min\",\"id\":\"id1\"}");
